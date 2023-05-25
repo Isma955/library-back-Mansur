@@ -3,7 +3,6 @@ const { bookController } = require("../controllers/book.controller");
 
 const router = Router();
 
-router.post("/books", bookController.createBook) // добавление книги
-
+router.post("/books", bookController.createBook); // добавление книги
 
 module.exports = router;

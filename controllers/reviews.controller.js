@@ -1,4 +1,4 @@
-const Reviews = require("../models/Reviews.model")
+const Reviews = require("../models/Genre.model")
 
 module.exports.reviewsController = {
 

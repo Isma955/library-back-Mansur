@@ -1,12 +1,9 @@
-const mongoose = require("mongoose");
-
-
+const mongoose = require("mongoose")
 
 const reviewsSchema = mongoose.Schema({
-    text: String,
-    name: String
+    
 });
 
-const Reviews = mongoose.model("Reviews", bookScreviews);
+const Reviews = mongoose.model("Reviews", reviewsSchema);
 
 module.exports = Reviews;

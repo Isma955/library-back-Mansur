@@ -1,22 +1,15 @@
-const Book = require("../models/Book.model")
+const Book = require("../models/Book.model");
+const Reviews = require("../models/Reviews.model")
+const Author = require("../models/Author.model")
 
 module.exports.bookController = {
-    createBook: async (req,res) => {
-        // добавление книги
-        const data = await Book.create({
-            name: {
-                type: req.body.type,
-                required: req.body.required
-            },
-            author: {
-                ref: req.body.ref,
-                type: req.body.type
-            },
-            genre: {
-                ref: req.body.ref,
-                type: req.body.type
-            }
-        })
-        res.json('Книга добавлена')
-    }
-}
+  createBook: async (req, res) => {
+    // добавление книги
+    const data = await Book.create({
+      name: req.body.name,
+      author: req.body.author,
+      genre: req.body.genre,
+    });
+    res.json("Книга добавлена");
+  },
+};
